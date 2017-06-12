@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestListViewXaml"
+             x:Class="TestListViewXaml.MainPage">
+
+    <ContentPage.Content>
+        <ListView  x:Name="listview_collection" RowHeight="150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" >
+                            <StackLayout Orientation="Vertical">
+                                <Label Text = "{Binding Action}" FontSize="30" AbsoluteLayout.LayoutBounds="50, 35, 200, 25"/>
+                            </StackLayout>
+                            <Image Source="{Binding Image}" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+
+</ContentPage>
